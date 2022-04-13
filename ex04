@@ -1,0 +1,44 @@
+/* Esse array é utilizado dentro das funções. Cada placa neste array representa uma entrada do respectivo veículo no estacionamento. */
+var placas = [
+    'RXB-2525', 'AKX-3333', 'ORO-7142', 'RXB-2525',
+    'AKX-3333', 'ORO-7142', 'AKX-3333', 'RXB-2525',
+    'AKX-3333', 'AKX-3333', 'RXB-2525', 'AKX-3333',
+    'RXB-2525', 'AKX-3333', 'ORO-7142', 'AKX-3333',
+    'AKX-3333', 'RXB-2525', 'AKX-3333', 'ORO-7142',
+    'ORO-7142', 'AKX-3333', 'AKX-3333', 'RXB-2525',
+    'AKX-3333', 'AKX-3333', 'RXB-2525', 'AKX-3333',
+    'AKX-3333', 'RXB-2525', 'AKX-3333', 'ORO-7142',
+    'ORO-7142', 'AKX-3333', 'ORO-7142', 'ORO-7142',
+    'ORO-7142', 'RXB-2525', 'AKX-3333', 'AKX-3333',
+    'ORO-7142', 'ORO-7142', 'AKX-3333', 'RXB-2525',
+    'AKX-3333', 'AKX-3333', 'RXB-2525', 'AKX-3333',
+    'RXB-2525', 'AKX-3333', 'ORO-7142', 'AKX-3333',
+    'AKX-3333', 'RXB-2525', 'AKX-3333', 'ORO-7142',
+    'ORO-7142', 'AKX-3333', 'AKX-3333', 'RXB-2525',
+    'AKX-3333', 'AKX-3333', 'RXB-2525', 'AKX-3333',
+    'AKX-3333', 'RXB-2525'
+ ]
+
+ //aqui calcula quantas vezes essa mesma placa entrou no estacionamento
+
+ function calcularNumeroDeEntradas(placa){
+    var entradas = 0
+    for(var i = 0; i < placas.length; i++) {
+       if (placas[i] == placa){
+           entradas++
+       }
+    }
+    return entradas
+ }
+
+ function calcularValorDevido(placa){
+   var valorDevido = calcularNumeroDeEntradas(placa)
+    if (valorDevido < 21){
+       return valorDevido = valorDevido*10
+    } else{
+       return valorDevido = ((valorDevido-20)*5) + (20*10)
+    }
+}
+ console.log(calcularNumeroDeEntradas("ORO-7142"))
+
+ console.log(calcularValorDevido("ORO-7142"))

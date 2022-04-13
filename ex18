@@ -1,0 +1,5 @@
+function cartaoDeVisitas() {
+    var nome = "Silvany"
+    var sobrenome = "Cardim"
+    console.log(nome + sobrenome)
+}

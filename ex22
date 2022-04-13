@@ -1,0 +1,10 @@
+var familia = ["Joana", "Felipe", "Gabriela", "Carlos", "Pedro", "Bruno"]
+
+for (var i = 0; i < familia.length; i++) {
+    if (familia[i] == "Pedro") { 
+        console.log(familia[i] + " Sousa");
+        continue
+    } else { // senão (se o nome não é Pedro), o sobrenome é Macedo
+        console.log(familia[i] + " Macedo");
+    }
+}

@@ -1,0 +1,26 @@
+function calcularIdade(dataDeNascimento) {
+   split = dataDeNascimento.split('/')
+   let [dia, mes, ano] = dataDeNascimento.split('/');
+   const d = new Date();   
+   const anoAtual = d.getFullYear();
+   const mesAtual = d.getMonth() + 1;
+   const diaAtual = d.getDate();
+   ano = +ano; mes = +mes; dia = +dia;
+   let quantosAnos = anoAtual - ano;
+   if (mesAtual < mes || mesAtual == mes && diaAtual < dia) {
+       quantosAnos--;
+   }
+   return quantosAnos < 0 ? 0 : quantosAnos;
+}
+ function deixaEntrar(dataDeNascimento, censura) {
+    var idade = calcularIdade(dataDeNascimento)
+    return(idade>=censura)
+}
+
+    dataDeNascimento = "09/11/1988"
+    censura = 22
+    console.log(deixaEntrar(dataDeNascimento, censura))
+
+function deixaEntrar(dataDeNascimento, censura) {
+    return calcularIdade() < censura;
+}

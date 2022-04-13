@@ -1,0 +1,6 @@
+function maxmin(a, b, c, d, e) {
+  var menor = Math.min(a, b, c, d, e)
+  var maior = Math.max(a, b, c, d, e)
+  return [menor, maior];
+}
+console.log(maxmin(2, 3, 4, 5, 6))
